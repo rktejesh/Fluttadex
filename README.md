@@ -27,3 +27,68 @@ Note: Make sure you are always up to date with sync and pull upstream. Sync and 
     - Add an argument `implementaion` and add `*Widget*Implementation()` as the parameter
     - Add an argument `description` and add `*Widget*Description()` as the parameter
     - Add an argument `link` and include link to the official documentation of the widget as the parameter
+
+For Example: 
+
+Create file Container.dart
+
+Add a stateless widget ContainerImplementation and implement Container
+
+
+      class ContainerImplementation extends StatelessWidget {
+      const ContainerImplementation({Key? key}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    "Container with default shape ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }
+    }
+
+Add a Stateless Widget ContainerDescription with the description of widget
+
+      class ContainerDescription extends StatelessWidget {
+      const ContainerDescription({Key? key}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        return Center(
+          child: Container(
+            margin: const EdgeInsets.only(left: 20.0),
+            child: const Text(
+              'A convenience widget that combines common painting, positioning, and sizing widget',
+            ),
+          ),
+        );
+      }
+    }
+    
+Update the widget_list.dart file add WidgetModel with your widget details
+
+    WidgetModel(
+        name: "Container",
+        implementation: ContainerImplementation(),
+        description: ContainerDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
+    ),
