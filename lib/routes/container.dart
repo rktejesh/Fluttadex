@@ -1,4 +1,3 @@
-import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ContainerImplementation extends StatelessWidget {
@@ -13,7 +12,7 @@ class ContainerImplementation extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
+              const Text(
                 "Container with default shape ",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -24,7 +23,7 @@ class ContainerImplementation extends StatelessWidget {
                 height: 100.0,
                 color: Theme.of(context).primaryColor,
               ),
-              Text(
+              const Text(
                 "Container with border radius of 12.0 ",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -35,9 +34,10 @@ class ContainerImplementation extends StatelessWidget {
                 height: 100.0,
                 decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.all(Radius.circular(12.0))),
+                    borderRadius:
+                        const BorderRadius.all(Radius.circular(12.0))),
               ),
-              Text(
+              const Text(
                 "Container with circle shape ",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -66,8 +66,8 @@ class ContainerDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        margin: EdgeInsets.only(left: 20.0),
-        child: Text(
+        margin: const EdgeInsets.only(left: 20.0),
+        child: const Text(
           'A convenience widget that combines common painting, positioning, and sizing widget',
         ),
       ),
@@ -75,9 +75,8 @@ class ContainerDescription extends StatelessWidget {
   }
 }
 
-class ContainerCode extends CodeString {
+class ContainerCode {
   const ContainerCode();
-  @override
   String buildCodeString() {
     return """Container(
                 width: 100.0,

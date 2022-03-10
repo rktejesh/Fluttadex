@@ -1,38 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
+import 'package:flutterista/models/widget_window.dart';
 
-ListView widgetList() {
-  const List<WidgetModel> widgets= [
-    WidgetModel(
-      name: "Container",
-      implementation: ContainerImplementation(),
-      description: ContainerDescription(),
-      link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
-    )
-  ];
+import 'routes/container.dart';
 
-  return ListView(
-    padding: const EdgeInsets.symmetric(vertical: 10),
-    children: getList(widgets),
-  );
+class ListBuilder extends StatefulWidget {
+  const ListBuilder({Key? key}) : super(key: key);
+
+  @override
+  _ListBuilderState createState() => _ListBuilderState();
 }
 
-List<Widget> getList(List<WidgetModel> widgets) {
-  const List<ListTile> list = [];
-  for (var element in widgets) {
-    String name = element.name.toLowerCase();
-    String subtitle = element.subtitle.toLowerCase();
-    list.add(
-      ListTile(
-        title: Text(
-          name + "Widget"
-        ),
-        subtitle: Text(
-          subtitle
-        ),
-        onTap: () {},
+class _ListBuilderState extends State<ListBuilder> {
+  @override
+  Widget build(BuildContext context) {
+    return widgetList();
+  }
+
+  ListView widgetList() {
+    const List<WidgetModel> widgets= [
+      WidgetModel(
+        name: "Container",
+        implementation: ContainerImplementation(),
+        description: ContainerDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
       )
+    ];
+
+    return ListView(
+      children: getList(widgets),
     );
   }
-  return list;
+
+  List<Widget> getList(List<WidgetModel> widgets) {
+    List<ListTile> list = [];
+    for (var element in widgets) {
+      String name = element.name;
+      String subtitle = element.subtitle;
+      list.add(
+          ListTile(
+            title: Text(
+                name + " Widget"
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WidgetWindow(item: element)),
+              );
+            },
+          )
+      );
+    }
+    return list;
+  }
 }
