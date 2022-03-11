@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
 
-final _color = [
-  Colors.amber[700],
-  Colors.amber[600],
-  Colors.amber[500],
-  Colors.amber[400],
-  Colors.amber[300],
-  Colors.amber[200],
-  Colors.amber[100]
-];
-
 class ColumnImplementation extends StatelessWidget {
   const ColumnImplementation({Key? key}) : super(key: key);
 
