@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/image.dart';
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -37,6 +38,12 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: ColumnImplementation(),
         description: ColumnDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
+      ),
+      WidgetModel(
+          name: "Image",
+          implementation: ImageImplementation(),
+          description: ImageDescription(),
+          link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       ),
     ];
 
