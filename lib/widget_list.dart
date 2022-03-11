@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
-
+import 'package:flutterista/routes/column.dart';
+import 'routes/row.dart';
 import 'routes/container.dart';
 
 class ListBuilder extends StatefulWidget {
@@ -31,6 +32,18 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: AppbarImplementation(),
         description: AppbarDescription(),
         link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+      ),
+      WidgetModel(
+        name: "Row",
+        implementation: RowImplementation(),
+        description: RowDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
+      ),
+      WidgetModel(
+        name: "Column",
+        implementation: ColumnImplementation(),
+        description: ColumnDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
       ),
     ];
 

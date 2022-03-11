@@ -74,14 +74,3 @@ class ContainerDescription extends StatelessWidget {
     );
   }
 }
-
-class ContainerCode {
-  const ContainerCode();
-  String buildCodeString() {
-    return """Container(
-                width: 100.0,
-                height: 100.0,
-                color: Theme.of(context).primaryColor,
-              ),""";
-  }
-}
