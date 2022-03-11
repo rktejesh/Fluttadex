@@ -36,7 +36,7 @@ class _ListBuilderState extends State<ListBuilder> {
         name: "Cloumn",
         implementation: ColumnImplementation(),
         description: ColumnDescription(),
-        link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
+        link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
       ),
     ];
 
