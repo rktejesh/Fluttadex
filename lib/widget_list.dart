@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
+import 'package:flutterista/routes/column.dart';
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -30,6 +31,12 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: RowImplementation(),
         description: RowDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
+      ),
+      WidgetModel(
+        name: "Cloumn",
+        implementation: ColumnImplementation(),
+        description: ColumnDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
       ),
     ];
 
