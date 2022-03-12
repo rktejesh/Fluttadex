@@ -1,13 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ElevatedButtonImplementation extends StatelessWidget {
+class ElevatedButtonImplementation extends StatefulWidget {
   const ElevatedButtonImplementation({Key? key}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return _ElevatedButtonImplementationState();
+  }
+}
+
+class _ElevatedButtonImplementationState extends State<ElevatedButtonImplementation> {
+  // variables to be initialized before @override
+  bool pressed = false;
+  int count = 1;
+
   @override
   Widget build(BuildContext context) {
 
-    final ButtonStyle style =
-    ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
+    ButtonStyle style =
+    ElevatedButton.styleFrom(
+      primary: pressed ? Colors.blue : Colors.pink,
+      textStyle: const TextStyle(fontSize: 20),
+    );
 
     return Center(
       child: Column(
@@ -23,16 +38,22 @@ class ElevatedButtonImplementation extends StatelessWidget {
           const SizedBox(height: 30),
 
           ElevatedButton(
-            style: style,
+            style: ElevatedButton.styleFrom(
+              primary: pressed ? Colors.pink : Colors.blue,
+              textStyle: const TextStyle(fontSize: 20),
+            ),
             onPressed: () {
-              // print("Hello");
+              setState(() {
+                pressed = !pressed;
+              });
             },
-            child: const Text('Normal Button'),
+            child: pressed ? const Text('Good job!') : const Text('Press me'),
           ),
 
           const SizedBox(height: 30),
 
           ElevatedButton.icon(
+              style: style,
               onPressed: () {},
               icon: const Icon(Icons.adb),
               label: const Text("Button with icon")
@@ -45,23 +66,28 @@ class ElevatedButtonImplementation extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: const Icon(Icons.add),
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  primary: Colors.green,
-                ),
-              ),
-
-              ElevatedButton(
-                onPressed: () {},
                 child: const Icon(Icons.favorite),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100),
                   ),
                   primary: Colors.red,
+                ),
+              ),
+
+
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    count++;
+                  });
+                },
+                child: const Icon(Icons.add),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  primary: Colors.green,
                 ),
               ),
 
@@ -76,6 +102,11 @@ class ElevatedButtonImplementation extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+
+          Text(
+            '+' + count.toString(),
+            style: const TextStyle(fontSize: 30),
           ),
 
 
