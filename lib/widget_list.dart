@@ -1,7 +1,10 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/floatingActionButton.dart';
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -33,10 +36,17 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
       ),
       WidgetModel(
-        name: "Cloumn",
+        name: "Column",
         implementation: ColumnImplementation(),
         description: ColumnDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
+      ),
+      WidgetModel(
+        name: "Floating Action Button",
+        implementation: FloatingActionButtonImplementation(),
+        description: FloatingActionButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
       ),
     ];
 
