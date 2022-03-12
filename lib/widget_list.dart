@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
+import 'package:flutterista/routes/BottomNavigationBar.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
@@ -69,6 +70,12 @@ class _ListBuilderState extends State<ListBuilder> {
         description: IconDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
       ),
+      WidgetModel(
+          name: "BottomNavigationBar",
+          link: "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          implementation: BottomNavigationBarImplementation(),
+          description: BottomNavigationBarDescription()
+      )
     ];
 
     return ListView(
