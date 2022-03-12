@@ -5,6 +5,7 @@ import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/dropDown.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
@@ -74,7 +75,15 @@ class _ListBuilderState extends State<ListBuilder> {
         name: "ElevatedButton",
         implementation: ElevatedButtonImplementation(),
         description: ElevatedButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+        link:
+            "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+      ),
+      WidgetModel(
+        name: "Dropdown",
+        implementation: DropdownImplementation(),
+        description: DropdownDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/DropdownButton-class.html",
       ),
     ];
 
