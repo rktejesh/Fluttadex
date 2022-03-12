@@ -3,8 +3,10 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
+import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
+import 'package:flutterista/routes/image.dart';
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -30,6 +32,12 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
       ),
       WidgetModel(
+        name: "App Bar",
+        implementation: AppbarImplementation(),
+        description: AppbarDescription(),
+        link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+      ),
+      WidgetModel(
         name: "Row",
         implementation: RowImplementation(),
         description: RowDescription(),
@@ -47,6 +55,12 @@ class _ListBuilderState extends State<ListBuilder> {
         description: FloatingActionButtonDescription(),
         link:
             "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
+      ),
+      WidgetModel(
+        name: "Image",
+        implementation: ImageImplementation(),
+        description: ImageDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       ),
     ];
 
