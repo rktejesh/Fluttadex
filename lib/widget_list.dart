@@ -8,6 +8,7 @@ import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
+import 'package:flutterista/routes/elevatedButton.dart';
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -68,6 +69,12 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: IconImplementation(),
         description: IconDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
+      ),
+      WidgetModel(
+        name: "ElevatedButton",
+        implementation: ElevatedButtonImplementation(),
+        description: ElevatedButtonDescription(),
+        link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
       ),
     ];
 
