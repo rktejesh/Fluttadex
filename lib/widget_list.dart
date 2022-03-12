@@ -5,6 +5,7 @@ import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/drawer.dart';
 import 'package:flutterista/routes/dropDown.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
 import 'package:flutterista/routes/image.dart';
@@ -84,6 +85,12 @@ class _ListBuilderState extends State<ListBuilder> {
         description: DropdownDescription(),
         link:
             "https://api.flutter.dev/flutter/material/DropdownButton-class.html",
+      ),
+      WidgetModel(
+        name: "Drawer",
+        implementation: DrawerImplementation(),
+        description: DrawerDescription(),
+        link: "https://docs.flutter.dev/cookbook/design/drawer",
       ),
     ];
 
