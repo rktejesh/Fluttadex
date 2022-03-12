@@ -1,8 +1,11 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/floatingActionButton.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
 import 'routes/row.dart';
@@ -48,10 +51,17 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
       ),
       WidgetModel(
-          name: "Image",
-          implementation: ImageImplementation(),
-          description: ImageDescription(),
-          link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
+        name: "Floating Action Button",
+        implementation: FloatingActionButtonImplementation(),
+        description: FloatingActionButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
+      ),
+      WidgetModel(
+        name: "Image",
+        implementation: ImageImplementation(),
+        description: ImageDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       ),
       WidgetModel(
         name: "Icon",
