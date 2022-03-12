@@ -5,6 +5,7 @@ import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/expansionPanel.dart';
 import 'package:flutterista/routes/drawer.dart';
 import 'package:flutterista/routes/dropDown.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
@@ -87,6 +88,12 @@ class _ListBuilderState extends State<ListBuilder> {
             "https://api.flutter.dev/flutter/material/DropdownButton-class.html",
       ),
       WidgetModel(
+        name: "ExpansionPanel",
+        implementation: ExpansionPanelImplementaion(),
+        description: ExpansionPanelDescription(),
+        link: "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
+
+       WidgetModel(
         name: "Drawer",
         implementation: DrawerImplementation(),
         description: DrawerDescription(),
