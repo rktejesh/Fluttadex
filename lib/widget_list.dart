@@ -3,10 +3,15 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
+import 'package:flutterista/routes/BottomNavigationBar.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/checkbox.dart';
+import 'package:flutterista/routes/cards.dart';
 import 'package:flutterista/routes/circularProgressIndicator.dart';
 import 'package:flutterista/routes/column.dart';
+import 'package:flutterista/routes/expansionPanel.dart';
+import 'package:flutterista/routes/drawer.dart';
+import 'package:flutterista/routes/dropDown.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
@@ -73,16 +78,50 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
       ),
       WidgetModel(
+          name: "BottomNavigationBar",
+          link:
+              "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          implementation: BottomNavigationBarImplementation(),
+          description: BottomNavigationBarDescription()),
+      WidgetModel(
         name: "ElevatedButton",
         implementation: ElevatedButtonImplementation(),
         description: ElevatedButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+        link:
+            "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+      ),
+      WidgetModel(
+        name: "Dropdown",
+        implementation: DropdownImplementation(),
+        description: DropdownDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/DropdownButton-class.html",
+      ),
+      WidgetModel(
+        name: "ExpansionPanel",
+        implementation: ExpansionPanelImplementaion(),
+        description: ExpansionPanelDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
+      ),
+      WidgetModel(
+        name: "Drawer",
+        implementation: DrawerImplementation(),
+        description: DrawerDescription(),
+        link: "https://docs.flutter.dev/cookbook/design/drawer",
       ),
       WidgetModel(
         name: "CircularProgressIndicator",
         implementation: CircularProgressIndicatorImplementation(),
         description: CircularProgressIndicatorDescription(),
-        link: "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        link:
+            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+      ),
+      WidgetModel(
+        name: "Card",
+        implementation: CardImplementation(),
+        description: CardDescription(),
+        link: "https://api.flutter.dev/flutter/material/Card-class.html",
       ),
       WidgetModel(
         name: "CheckBox",
