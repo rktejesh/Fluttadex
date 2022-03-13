@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
+import 'package:flutterista/routes/checkbox.dart';
 import 'package:flutterista/routes/circularProgressIndicator.dart';
 import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
@@ -82,6 +83,12 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: CircularProgressIndicatorImplementation(),
         description: CircularProgressIndicatorDescription(),
         link: "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+      ),
+      WidgetModel(
+        name: "CheckBox",
+        implementation: CheckBoxImplementation(),
+        description: CheckBoxDescription(),
+        link: "https://api.flutter.dev/flutter/material/Checkbox-class.html",
       ),
     ];
 
