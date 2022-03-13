@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/appBar.dart';
+import 'package:flutterista/routes/circularProgressIndicator.dart';
 import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/expansionPanel.dart';
 import 'package:flutterista/routes/drawer.dart';
@@ -98,6 +99,12 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: DrawerImplementation(),
         description: DrawerDescription(),
         link: "https://docs.flutter.dev/cookbook/design/drawer",
+      ),
+      WidgetModel(
+        name: "CircularProgressIndicator",
+        implementation: CircularProgressIndicatorImplementation(),
+        description: CircularProgressIndicatorDescription(),
+        link: "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
       ),
     ];
 
