@@ -42,6 +42,16 @@ class _SliderImplementationState extends State<SliderImplementation> {
           },
         ),
 
+        Text("A disabled slider"),
+        Slider(
+          value: 20,
+          max: 100,
+          divisions: 20,
+          label: "20",
+          onChanged: (double value) {},
+          activeColor: Colors.grey,
+        ),
+
       ],
     );
   }
