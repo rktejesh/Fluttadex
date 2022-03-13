@@ -8,8 +8,12 @@ class CardImplementation extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Card(
+          margin: const EdgeInsets.symmetric(
+            vertical: 50,
+            horizontal: 25,
+          ),
           elevation: 5,
-          color: Colors.black12,
+          color: Colors.lightBlueAccent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(32),
           ),
@@ -21,11 +25,11 @@ class CardImplementation extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 children: <Widget>[
                   Ink.image(
-                    image: const NetworkImage(
-                      "https://images.unsplash.com/photo-1647089490719-d539f4041119?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                    image: const AssetImage(
+                      "./assets/Images/flutterIcon.png",
                     ),
                     height: 240,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                     colorFilter: const ColorFilter.matrix(
                       <double>[
                         0.2125,
@@ -55,10 +59,10 @@ class CardImplementation extends StatelessWidget {
                     ),
                   ),
                   const Positioned(
-                    bottom: 8,
-                    left: 12,
+                    bottom: 0,
+                    left: 16,
                     child: Text(
-                      "Fluttadex - Card",
+                      "Fluttadex",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -71,7 +75,7 @@ class CardImplementation extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(18.0),
                 child: Text(
-                  "Card is a build-in widget in flutter which derives its design from Google’s Material Design Library. The functionality of this widget on screen is, it is bland space or panel with round corners and a slight elevation on the lower side. It comes with many properties like color, shape, shadow color, etc which lets developers customize it the way they like.",
+                  "Fluttadex is a project under the initiative of Tejesh sir aimed at introducing all the flutter widgets, their common use and application is a single program. The project is a part of the Open source contribution event as a part of the FOSS Weekend",
                   style: TextStyle(
                     fontSize: 16,
                   ),
