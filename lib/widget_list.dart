@@ -14,6 +14,7 @@ import 'package:flutterista/routes/expansionPanel.dart';
 import 'package:flutterista/routes/drawer.dart';
 import 'package:flutterista/routes/dropDown.dart';
 import 'package:flutterista/routes/floatingActionButton.dart';
+import 'package:flutterista/routes/form.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
 import 'package:flutterista/routes/elevatedButton.dart';
@@ -130,7 +131,19 @@ class _ListBuilderState extends State<ListBuilder> {
         description: CheckBoxDescription(),
         link: "https://api.flutter.dev/flutter/material/Checkbox-class.html",
       ),
-      WidgetModel(name: "SnackBar", link: "https://api.flutter.dev/flutter/material/SnackBar-class.html", implementation: SnackBarImplementation(), description: SnackBarDescription())
+      WidgetModel(
+        name: "SnackBar", 
+        link: "https://api.flutter.dev/flutter/material/SnackBar-class.html", 
+        implementation: SnackBarImplementation(), 
+        description: SnackBarDescription()
+      ),
+      WidgetModel(
+        name: "Form",
+        implementation: FormImplementation(),
+        description: FormDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Form-class.html",
+      ),
+
     ];
 
     return ListView(
