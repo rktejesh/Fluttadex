@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/BottomNavigationBar.dart';
+import 'package:flutterista/routes/SnackBar.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/checkbox.dart';
 import 'package:flutterista/routes/cards.dart';
@@ -129,6 +130,7 @@ class _ListBuilderState extends State<ListBuilder> {
         description: CheckBoxDescription(),
         link: "https://api.flutter.dev/flutter/material/Checkbox-class.html",
       ),
+      WidgetModel(name: "SnackBar", link: "https://api.flutter.dev/flutter/material/SnackBar-class.html", implementation: SnackBarImplementation(), description: SnackBarDescription())
     ];
 
     return ListView(
