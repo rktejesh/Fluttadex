@@ -5,6 +5,7 @@ import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/BottomNavigationBar.dart';
 import 'package:flutterista/routes/appBar.dart';
+import 'package:flutterista/routes/cards.dart';
 import 'package:flutterista/routes/circularProgressIndicator.dart';
 import 'package:flutterista/routes/column.dart';
 import 'package:flutterista/routes/expansionPanel.dart';
@@ -77,10 +78,10 @@ class _ListBuilderState extends State<ListBuilder> {
       ),
       WidgetModel(
           name: "BottomNavigationBar",
-          link: "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          link:
+              "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
           implementation: BottomNavigationBarImplementation(),
-          description: BottomNavigationBarDescription()
-      ),
+          description: BottomNavigationBarDescription()),
       WidgetModel(
         name: "ElevatedButton",
         implementation: ElevatedButtonImplementation(),
@@ -99,9 +100,10 @@ class _ListBuilderState extends State<ListBuilder> {
         name: "ExpansionPanel",
         implementation: ExpansionPanelImplementaion(),
         description: ExpansionPanelDescription(),
-        link: "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
+        link:
+            "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
       ),
-       WidgetModel(
+      WidgetModel(
         name: "Drawer",
         implementation: DrawerImplementation(),
         description: DrawerDescription(),
@@ -111,7 +113,14 @@ class _ListBuilderState extends State<ListBuilder> {
         name: "CircularProgressIndicator",
         implementation: CircularProgressIndicatorImplementation(),
         description: CircularProgressIndicatorDescription(),
-        link: "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        link:
+            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+      ),
+      WidgetModel(
+        name: "Card",
+        implementation: CardImplementation(),
+        description: CardDescription(),
+        link: "https://api.flutter.dev/flutter/material/Card-class.html",
       ),
     ];
 
