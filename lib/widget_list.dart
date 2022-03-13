@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
+import 'package:flutterista/routes/BottomNavigationBar.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/circularProgressIndicator.dart';
 import 'package:flutterista/routes/column.dart';
@@ -75,6 +76,12 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
       ),
       WidgetModel(
+          name: "BottomNavigationBar",
+          link: "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          implementation: BottomNavigationBarImplementation(),
+          description: BottomNavigationBarDescription()
+      ),
+      WidgetModel(
         name: "ElevatedButton",
         implementation: ElevatedButtonImplementation(),
         description: ElevatedButtonDescription(),
@@ -93,7 +100,7 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: ExpansionPanelImplementaion(),
         description: ExpansionPanelDescription(),
         link: "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
-
+      ),
        WidgetModel(
         name: "Drawer",
         implementation: DrawerImplementation(),
