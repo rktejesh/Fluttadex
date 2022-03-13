@@ -19,124 +19,139 @@ class ImageImplementation extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                imgList[0],
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    // image has been loaded
-                    return child; // return Image
-                  }
-                  // return a loader if image is not loaded yet
-                  return Center(
-                    child: CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                },
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(
+                  imgList[0],
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      // image has been loaded
+                      return child; // return Image
+                    }
+                    // return a loader if image is not loaded yet
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Image.network(
-                imgList[1],
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    // image has been loaded
-                    return child; // return Image
-                  }
-                  // return a loader if image is not loaded yet
-                  return Center(
-                    child: CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                },
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image.network(
+                  imgList[1],
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      // image has been loaded
+                      return child; // return Image
+                    }
+                    // return a loader if image is not loaded yet
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(80),
-              child: Image.network(
-                imgList[2],
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    // image has been loaded
-                    return child; // return Image
-                  }
-                  // return a loader if image is not loaded yet
-                  return Center(
-                    child: CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                },
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(80),
+                child: Image.network(
+                  imgList[2],
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      // image has been loaded
+                      return child; // return Image
+                    }
+                    // return a loader if image is not loaded yet
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(120),
-              child: Image.network(
-                imgList[3],
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    // image has been loaded
-                    return child; // return Image
-                  }
-                  // return a loader if image is not loaded yet
-                  return Center(
-                    child: CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                },
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(120),
+                child: Image.network(
+                  imgList[3],
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      // image has been loaded
+                      return child; // return Image
+                    }
+                    // return a loader if image is not loaded yet
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(150),
-              child: Image.network(
-                imgList[4],
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    // image has been loaded
-                    return child; // return Image
-                  }
-                  // return a loader if image is not loaded yet
-                  return Center(
-                    child: CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    ),
-                  );
-                },
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(150),
+                child: Image.network(
+                  imgList[4],
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      // image has been loaded
+                      return child; // return Image
+                    }
+                    // return a loader if image is not loaded yet
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ]),
