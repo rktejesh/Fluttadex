@@ -18,6 +18,8 @@ import 'package:flutterista/routes/form.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
 import 'package:flutterista/routes/elevatedButton.dart';
+import 'package:flutterista/routes/slider.dart';
+
 import 'routes/row.dart';
 import 'routes/container.dart';
 
@@ -143,7 +145,12 @@ class _ListBuilderState extends State<ListBuilder> {
         description: FormDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Form-class.html",
       ),
-
+      WidgetModel(
+        name: "Slider",
+        implementation: SliderImplementation(),
+        description: SliderDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Form-class.html",
+      ),
     ];
 
     return ListView(
