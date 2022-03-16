@@ -5,6 +5,7 @@ import 'package:flutterista/models/widget_model.dart';
 import 'package:flutterista/models/widget_window.dart';
 import 'package:flutterista/routes/BottomNavigationBar.dart';
 import 'package:flutterista/routes/SnackBar.dart';
+import 'package:flutterista/routes/animatedcontainer.dart';
 import 'package:flutterista/routes/appBar.dart';
 import 'package:flutterista/routes/checkbox.dart';
 import 'package:flutterista/routes/cards.dart';
@@ -134,11 +135,10 @@ class _ListBuilderState extends State<ListBuilder> {
         link: "https://api.flutter.dev/flutter/material/Checkbox-class.html",
       ),
       WidgetModel(
-        name: "SnackBar", 
-        link: "https://api.flutter.dev/flutter/material/SnackBar-class.html", 
-        implementation: SnackBarImplementation(), 
-        description: SnackBarDescription()
-      ),
+          name: "SnackBar",
+          link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
+          implementation: SnackBarImplementation(),
+          description: SnackBarDescription()),
       WidgetModel(
         name: "Form",
         implementation: FormImplementation(),
@@ -150,6 +150,13 @@ class _ListBuilderState extends State<ListBuilder> {
         implementation: SliderImplementation(),
         description: SliderDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Form-class.html",
+      ),
+      WidgetModel(
+        name: "AnimatedContainer",
+        implementation: AnimatedContainerImplementation(),
+        description: AnimatedContainerDescription(),
+        link:
+            "https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html",
       ),
     ];
 
