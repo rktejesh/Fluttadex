@@ -20,6 +20,7 @@ import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
 import 'package:flutterista/routes/elevatedButton.dart';
 import 'package:flutterista/routes/slider.dart';
+import 'package:flutterista/routes/sliverappbar.dart';
 
 import 'routes/row.dart';
 import 'routes/container.dart';
@@ -158,6 +159,13 @@ class _ListBuilderState extends State<ListBuilder> {
         link:
             "https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html",
       ),
+      WidgetModel(
+        name: "SliverAppBar",
+        implementation: SliverAppBarImplementation(),
+        description: SliverAppBarDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
+      )
     ];
 
     return ListView(
