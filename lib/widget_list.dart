@@ -19,6 +19,7 @@ import 'package:flutterista/routes/form.dart';
 import 'package:flutterista/routes/image.dart';
 import 'package:flutterista/routes/icon.dart';
 import 'package:flutterista/routes/elevatedButton.dart';
+import 'package:flutterista/routes/simpledialog.dart';
 import 'package:flutterista/routes/slider.dart';
 import 'package:flutterista/routes/sliverappbar.dart';
 
@@ -165,7 +166,14 @@ class _ListBuilderState extends State<ListBuilder> {
         description: SliverAppBarDescription(),
         link:
             "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
-      )
+      ),
+      WidgetModel(
+        name: 'SimpleDialog',
+        implementation: SimpleDialogImplementation(),
+        description: SimpleDialogDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/SimpleDialog-class.html",
+      ),
     ];
 
     return ListView(
